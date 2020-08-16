@@ -4,7 +4,7 @@
 
 Mee6 Bypasser is a Discord Bot that allows you to use premium mee6 level role rewards. This bot use the Mee6's level system.
 
-Add new role            |  Display all roles
+Add new roles            |  Display all roles / Help command
 :-------------------------:|:-------------------------:
 ![](https://github.com/Darkempire78/mee6-bypasser/blob/master/Capture1.PNG)  |  ![](https://github.com/Darkempire78/mee6-bypasser/blob/master/Capture2.PNG)
 
