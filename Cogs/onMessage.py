@@ -27,7 +27,6 @@ class OnMessageCog(commands.Cog, name="on message"):
         # Check user level
         user_id = message.author.id
         userLevel = await mee6API.levels.get_user_level(user_id)
-        print("your level is : " + str(userLevel))
 
         # Check roles json
         with open("roles.json", "r") as roleFile:
