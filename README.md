@@ -22,10 +22,12 @@ Finally, host the bot and invite it to your own server.
 
 ## Features
 
-* Download MP3 and album from Deezer
-* Select the best quality (320kbps) if the file doesn't reach Discord's file size limit (8mb).
-* Download lyrics if available.
-* Get infos about artists, albums...
+This Discord Bot bypasses a premium feature of the Bot Mee6. You can use it for free.
+You can select roles, that are given to users that reach a certain Mee6-Level.
+
+* Give and remove roles to users that reach a certain Mee6-Level.
+* Display the list of role rewards
+* Remove previous role rewards. 
 
 ## Commands
 
