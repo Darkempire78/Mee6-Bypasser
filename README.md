@@ -39,6 +39,9 @@ You can select roles, that are given to users that reach a certain Mee6-Level.
 
 ?help : display help.
 ```
+## Note 
+
+The bot does only work if the Mee6's leaderboard is public.
 
 ## Contributing
 
