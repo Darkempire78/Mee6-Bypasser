@@ -2,6 +2,7 @@ import discord
 import json
 
 from discord.ext import commands
+from discord.ext.commands import has_permissions
 
 # ------------------------ COGS ------------------------ #  
 
@@ -12,6 +13,7 @@ class AddCog(commands.Cog, name="add command"):
 # ------------------------------------------------------ #  
 
     @commands.command(name = 'add')
+    @has_permissions(administrator = True)
     async def add (self, ctx, levelNumber, roleId):
 
         # Trying set levelnumber to int

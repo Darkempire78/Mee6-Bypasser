@@ -2,6 +2,7 @@ import discord
 import json
 
 from discord.ext import commands
+from discord.ext.commands import has_permissions
 
 # ------------------------ COGS ------------------------ #  
 
@@ -12,6 +13,7 @@ class RemovePreviousRewardsCog(commands.Cog, name="removePreviousRewards command
 # ------------------------------------------------------ #  
 
     @commands.command(name = 'removepreviousrewards', aliases = ["rpr", "settings"])
+    @has_permissions(administrator = True)
     async def rolerewards (self, ctx, trueOrFalse):
 
         # Read json file

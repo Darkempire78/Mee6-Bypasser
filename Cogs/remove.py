@@ -2,6 +2,7 @@ import discord
 import json
 
 from discord.ext import commands
+from discord.ext.commands import has_permissions
 
 # ------------------------ COGS ------------------------ #  
 
@@ -12,6 +13,7 @@ class RemoveCog(commands.Cog, name="remove command"):
 # ------------------------------------------------------ #  
 
     @commands.command(name = 'remove')
+    @has_permissions(administrator = True)
     async def remove (self, ctx, levelNumber):
 
         # Trying set levelnumber to int
