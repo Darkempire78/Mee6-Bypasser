@@ -1,4 +1,4 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/darkempire78/mee6-bypasser/badge/master)](https://www.codefactor.io/repository/github/darkempire78/mee6-bypasser/overview/master) ![](https://img.shields.io/github/repo-size/Darkempire78/mee6-bypasser)
+[![CodeFactor](https://www.codefactor.io/repository/github/darkempire78/mee6-bypasser/badge/master)](https://www.codefactor.io/repository/github/darkempire78/mee6-bypasser/overview/master) ![](https://img.shields.io/github/repo-size/Darkempire78/mee6-bypasser) [![Sourcery](https://img.shields.io/badge/Sourcery-enabled-brightgreen)](https://sourcery.ai)
 
 # Mee6 Bypasser Discord Bot (free premium level-role)
 
