@@ -12,14 +12,12 @@ class RoleRewardsCog(commands.Cog, name="roleRewards command"):
 # ------------------------------------------------------ #  
 
     @commands.command(name = 'rolerewards', aliases = ["rr", "show", "rolelist"])
-    async def rolerewards (self, ctx):
+    async def rolerewards(self, ctx):
 
         # Read json file
         with open("roles.json", "r") as roleFile:
             data = json.load(roleFile)
-            levelList = []
-            for x in data["roles"]:
-                levelList.append(x["level"])
+            levelList = [x["level"] for x in data["roles"]]
         # Sort the list
         levelList.sort()
 
