@@ -55,6 +55,10 @@ You can select roles, that are given to users that reach a certain Mee6-Level.
 
 The bot does only work if the Mee6's leaderboard is public.
 
+## Do not work ?
+
+If you have an error with the mee6 api, your server must be too active for the api. You must use the task system.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
