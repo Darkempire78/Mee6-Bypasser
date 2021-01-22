@@ -1,4 +1,6 @@
 {
     "token": "",
-    "removePreviousRewards": true
+    "removePreviousRewards": true,
+    "updateEachMessage": true,
+    "updateEachTime": []
 }

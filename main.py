@@ -16,7 +16,11 @@ class Greetings(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self._last_member = None
-        
+
+with open("configuration.json", "r") as roleFile:
+    data = json.load(roleFile)
+    token = data["token"]
+
 intents = discord.Intents.default()
 intents.members = True
 
@@ -57,7 +61,4 @@ async def on_ready():
 
 
 # ------------------------ RUN ------------------------ # 
-with open("configuration.json", "r") as roleFile:
-    data = json.load(roleFile)
-    token = data["token"]
 bot.run(token)
