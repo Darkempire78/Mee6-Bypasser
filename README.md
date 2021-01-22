@@ -57,7 +57,7 @@ The bot does only work if the Mee6's leaderboard is public.
 
 ## Do not work ?
 
-If you have an error with the mee6 api, your server must be too active for the api. You must use the task system.
+If you have an error with the mee6 api, your server must be too active for the api. You must use the task system (updateEachTime).
 
 ## Contributing
 
