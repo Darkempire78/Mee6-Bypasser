@@ -16,7 +16,7 @@ Add new roles            |  Display all roles / Help command
 * Install all dependencies: `pip install -r requirements.txt`
 
 Edit `configuration.json` :
-```Json
+```Javascript
 {
     "token": "", // Your token here
     "removePreviousRewards": true, // true / false
