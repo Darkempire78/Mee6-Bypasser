@@ -33,7 +33,6 @@ class RemoveCog(commands.Cog, name="remove command"):
                 for x in data["roles"]:
                     numberOfLevelReward += 1
                     if x["level"] == levelNumber:
-                        print(data["roles"][numberOfLevelReward])
                         del data["roles"][numberOfLevelReward]
                         newdata = data
             except:

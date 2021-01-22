@@ -4,6 +4,8 @@ import json
 from discord.ext import commands
 from discord.utils import get
 
+from datetime import datetime
+
 from mee6_py_api import API
 
 # ------------------------ COGS ------------------------ #  
@@ -20,6 +22,12 @@ class OnMessageCog(commands.Cog, name="on message"):
         if (message.author.bot):
             return
 
+        # Check config json
+        with open("configuration.json", "r") as configFile:
+            config = json.load(configFile)
+
+        # Anti spam of request
+        
         # Find guild id
         guild_id = message.guild.id
         mee6API = API(guild_id)
@@ -32,13 +40,9 @@ class OnMessageCog(commands.Cog, name="on message"):
         with open("roles.json", "r") as roleFile:
             data = json.load(roleFile)
         
-        # Check config json
-        with open("configuration.json", "r") as configFile:
-            config = json.load(configFile)
-        
         # Add role
         for x in data["roles"]:
-            if (x["level"] == userLevel):
+            if x["level"] <= userLevel:
                 if x["id"] not in [y.id for y in message.author.roles]: # Check if user has not the role
                     getrole = get(message.guild.roles, id = x["id"])
                     await message.author.add_roles(getrole)

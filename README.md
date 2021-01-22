@@ -11,12 +11,9 @@ Add new roles            |  Display all roles / Help command
 
 ## Installation
 
-Install all dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-Then put your Discord token that can be found in the Discord's developers portal inside `configuration.json`.
+* Install all dependencies: `pip install -r requirements.txt`
+* Put your Discord token that can be found in the Discord's developers portal inside `configuration.json`.
+* This bot have to use the "server members intent", so you have to enable it in the Discord's developers portal.
 
 Finally, host the bot and invite it to your own server.
 
@@ -26,8 +23,9 @@ This Discord Bot bypasses a premium feature of the Bot Mee6. You can use it for 
 You can select roles, that are given to users that reach a certain Mee6-Level.
 
 * Give and remove roles to users that reach a certain Mee6-Level.
-* Display the list of role rewards
-* Remove previous role rewards. 
+* Display the list of role rewards.
+* Remove previous role rewards.
+* update the whole server. 
 
 ## Commands
 
@@ -36,6 +34,7 @@ You can select roles, that are given to users that reach a certain Mee6-Level.
 ?remove <Level number> : Remove a role reward.
 ?rolerewards : Display the list of role rewards.
 ?removepreviousrewards <true/false> : Change remove-previous-rewards setting.
+?leaderboard : updates the roles of the users of the whole server.
 
 ?help : display help.
 ```
