@@ -22,7 +22,8 @@ Edit `configuration.json` :
     "removePreviousRewards": true, // true / false
     "updateEachMessage": true, // true / false
     "updateEachTime": [] // ⚠️ only for active server : set false updateEachMessage and add your guild id in updateEachTime => update each 5 minutes users from the server
-}```
+}
+```
 
 * This bot have to use the "server members intent", so you have to enable it in the Discord's developers portal.
 
