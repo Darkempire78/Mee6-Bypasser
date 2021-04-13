@@ -59,6 +59,12 @@ The bot does only work if the Mee6's leaderboard is public.
 
 If you have an error with the mee6 api, your server must be too active for the api. You must use the task system (updateEachTime).
 
+## Discord
+
+Join the Discord server !
+
+[![](https://i.imgur.com/UfyvtOL.png)](https://discord.gg/sPvJmY7mcV)
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
