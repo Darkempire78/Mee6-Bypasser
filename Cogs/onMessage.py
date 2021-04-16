@@ -35,6 +35,10 @@ class OnMessageCog(commands.Cog, name="on message"):
             user_id = message.author.id
             userLevel = await mee6API.levels.get_user_level(user_id)
 
+            if userLevel is None:
+                date = datetime.datetime.now().strftime("%x %X")
+                return print(f"{date} The search for the player's level failed.")
+
             # Check roles json
             with open("roles.json", "r") as roleFile:
                 data = json.load(roleFile)
