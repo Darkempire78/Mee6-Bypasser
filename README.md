@@ -1,6 +1,6 @@
 ![](https://img.shields.io/codefactor/grade/github/Darkempire78/Mee6-Bypasser?style=for-the-badge) 
 ![](https://img.shields.io/github/repo-size/Darkempire78/Mee6-Bypasser?style=for-the-badge)
-![](https://img.shields.io/badge/SOURCERY-ENABLED-green?style=for-the-badge)
+![](https://img.shields.io/badge/SOURCERY-ENABLED-green?style=for-the-badge) <a href="https://discord.com/invite/sPvJmY7mcV"><img src="https://img.shields.io/discord/831524351311609907?color=%237289DA&label=DISCORD&style=for-the-badge"></a>
 
 # Mee6 Bypasser Discord Bot (free premium level-role)
 
