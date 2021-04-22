@@ -49,10 +49,19 @@ class OnMessageCog(commands.Cog, name="on message"):
                     if x["id"] not in [y.id for y in message.author.roles]: # Check if user has not the role
                         getrole = get(message.guild.roles, id = x["id"])
                         await message.author.add_roles(getrole)
-                elif config["removePreviousRewards"] == True:
-                    if x["id"] in [y.id for y in message.author.roles]:
-                        getrole = get(message.guild.roles, id = x["id"])
-                        await message.author.remove_roles(getrole)
+
+                        # Remove previous roles
+                        if config["removePreviousRewards"]:
+                            for userRole in message.author.roles:
+                                if (userRole.id in [roleReward["id"] for roleReward in data["roles"]]) and userRole.id != x["id"]:
+                                    getrole = get(message.guild.roles, id = x["id"])
+                                    await message.author.remove_roles(getrole)
+
+
+                # elif config["removePreviousRewards"] == True:
+                #     if x["id"] in [y.id for y in message.author.roles]:
+                #         getrole = get(message.guild.roles, id = x["id"])
+                #         await message.author.remove_roles(getrole)
 
 # ------------------------ BOT ------------------------ #  
 
