@@ -11,54 +11,49 @@ import json
 from datetime import datetime
 from discord.ext import commands
 from discord.ext import tasks
+from discord.ext.commands import AutoShardedBot as asb
+
+started = False
 
 class Greetings(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self._last_member = None
 
-with open("configuration.json", "r") as roleFile:
-    data = json.load(roleFile)
-    token = data["token"]
+class Mee6Bypasser(asb):
+    def __init__(self):
+        super().__init__(
+            command_prefix=commands.when_mentioned_or("?"),
+            case_insensitive=True
+            intents=discord.Intents.all(), # remove this if you dont want to enable all intents
+            help_command=None
+        )
+        
+        self.remove_command("help")
+        self.cog_blacklist = [
+            "__init__.py",
+            "functions.py"
+        ]
+        
+        if not started:
+            print("Loading cogs:")
+            for file in os.listdir("./Cogs"):
+                if file.endswith(".py") and not file in self.cog_blacklist:
+                    try:
+                        self.load_extension(f"Cogs.{file[:-3]}")
+                        print(f"    Loaded '{file}'")
+                    except Exception as e:
+                        print(str(e))
+            started = True # doing this so it doesnt load cogs every time its initialised
 
-intents = discord.Intents.default()
-intents.members = True
+    async def on_connect(self):
+        print("Connected")
+    async def on_ready(self):
+        print("Ready")
+        await self.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name =f"{bot.get_prefix}help"))
 
-bot = commands.Bot("?", intents = intents)
-# bot = commands.when_mentioned_or("?")
-
-# HELP
-bot.remove_command("help") # To create a personal help command 
-
-# Load cogs
-path = os.path.realpath(__file__)
-path = path.replace('\\', '/')
-path = path.replace('main.py', 'Cogs')
-initial_extensions = os.listdir(path)
-try:
-    initial_extensions.remove("__pycache__")
-except:
-    pass
-print(initial_extensions)
-initial_extensions3 = []
-for initial_extensions2 in initial_extensions:
-    initial_extensions2 = "Cogs." + initial_extensions2
-    initial_extensions2 = initial_extensions2.replace(".py", "")
-    initial_extensions3.append(initial_extensions2)
-
-if __name__ == '__main__':
-    for extension in initial_extensions3:
-        try:
-            bot.load_extension(extension)
-        except Exception as e:
-            print(f'Failed to load extension {extension}.', file=sys.stderr)
-
-@bot.event
-async def on_ready():
-    print('We have logged in as {0.user}'.format(bot))
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name =f"{bot.command_prefix}help"))
-    print(discord.__version__)
-
-
-# ------------------------ RUN ------------------------ # 
-bot.run(token)
+if __name__ == "__main__":
+    with open("configuration.json", "r") as f:
+        config = json.load(f)
+    bot = Mee6Bypasser()
+    bot.run(config["token"])
