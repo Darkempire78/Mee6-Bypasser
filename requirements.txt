@@ -1,2 +1,2 @@
-discord.py
+discord.py==1.7.3
 mee6-py-api
